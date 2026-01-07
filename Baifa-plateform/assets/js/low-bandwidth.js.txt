@@ -1,0 +1,126 @@
+// low-bandwidth.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if user has enabled low-bandwidth mode previously
+  const isLowBandwidth = localStorage.getItem('baifa-low-bandwidth') === 'true';
+  if (isLowBandwidth) {
+    document.body.classList.add('low-bandwidth');
+    applyLowBandwidthMode();
+  }
+  
+  // Add event listener for low-bandwidth toggle if element exists
+  const lowBandwidthToggle = document.getElementById('low-bandwidth-toggle');
+  if (lowBandwidthToggle) {
+    lowBandwidthToggle.addEventListener('click', toggleLowBandwidthMode);
+  }
+  
+  // Auto-detect slow connection and suggest low-bandwidth mode
+  if (navigator.connection && navigator.connection.effectiveType) {
+    if (['slow-2g', '2g', '3g'].includes(navigator.connection.effectiveType)) {
+      showLowBandwidthSuggestion();
+    }
+  }
+});
+
+function toggleLowBandwidthMode() {
+  const isLowBandwidth = document.body.classList.toggle('low-bandwidth');
+  localStorage.setItem('baifa-low-bandwidth', isLowBandwidth);
+  
+  if (isLowBandwidth) {
+    applyLowBandwidthMode();
+  } else {
+    resetLowBandwidthMode();
+  }
+}
+
+function applyLowBandwidthMode() {
+  // Replace video backgrounds with static images
+  document.querySelectorAll('.video-background').forEach(video => {
+    const placeholder = video.getAttribute('data-placeholder');
+    if (placeholder) {
+      video.outerHTML = `<div class="image-placeholder" style="background-image: url('${placeholder}')"></div>`;
+    }
+  });
+  
+  // Remove non-essential images
+  document.querySelectorAll('.decorative-image').forEach(img => {
+    img.style.display = 'none';
+  });
+  
+  // Replace high-res images with low-res versions
+  document.querySelectorAll('img').forEach(img => {
+    const src = img.getAttribute('src');
+    if (src && !src.includes('logo') && !src.includes('avatar')) {
+      const lowResSrc = src.replace(/\.(jpg|jpeg|png)$/i, '-low.$1');
+      // Only replace if low-res version exists
+      fetch(lowResSrc, { method: 'HEAD' })
+        .then(response => {
+          if (response.ok) {
+            img.setAttribute('src', lowResSrc);
+          }
+        })
+        .catch(() => {});
+    }
+  });
+  
+  // Disable animations
+  document.body.style.animation = 'none';
+  document.querySelectorAll('*').forEach(element => {
+    element.style.transition = 'none';
+    element.style.animation = 'none';
+  });
+  
+  // Simplify course cards
+  document.querySelectorAll('.course-card').forEach(card => {
+    const badge = card.querySelector('.course-badge');
+    if (badge) badge.style.display = 'none';
+  });
+  
+  // Show low-bandwidth banner
+  showLowBandwidthBanner();
+}
+
+function resetLowBandwidthMode() {
+  location.reload(); // Simplest way to reset all changes
+}
+
+function showLowBandwidthSuggestion() {
+  if (document.querySelector('.low-bandwidth-suggestion')) return;
+  
+  const banner = document.createElement('div');
+  banner.className = 'low-bandwidth-suggestion';
+  banner.innerHTML = `
+    <p><i class="fas fa-wifi-slash"></i> We detected a slow connection. Enable <strong>Low-Bandwidth Mode</strong> for faster loading.</p>
+    <button id="enable-low-bandwidth">Enable Mode</button>
+    <button class="dismiss">Dismiss</button>
+  `;
+  document.body.prepend(banner);
+  
+  document.getElementById('enable-low-bandwidth').addEventListener('click', function() {
+    document.body.classList.add('low-bandwidth');
+    localStorage.setItem('baifa-low-bandwidth', 'true');
+    applyLowBandwidthMode();
+    banner.remove();
+  });
+  
+  banner.querySelector('.dismiss').addEventListener('click', function() {
+    banner.remove();
+  });
+}
+
+function showLowBandwidthBanner() {
+  if (document.querySelector('.low-bandwidth-banner')) return;
+  
+  const banner = document.createElement('div');
+  banner.className = 'low-bandwidth-banner';
+  banner.innerHTML = `
+    <p><i class="fas fa-wifi-slash"></i> Low-Bandwidth Mode Active. Some features are simplified for faster loading.</p>
+    <button id="disable-low-bandwidth">Disable Mode</button>
+  `;
+  document.body.prepend(banner);
+  
+  document.getElementById('disable-low-bandwidth').addEventListener('click', function() {
+    document.body.classList.remove('low-bandwidth');
+    localStorage.setItem('baifa-low-bandwidth', 'false');
+    resetLowBandwidthMode();
+  });
+}

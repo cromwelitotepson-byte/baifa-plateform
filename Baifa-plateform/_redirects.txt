@@ -1,0 +1,10 @@
+# Netlify redirects
+/courses              /courses.html       200
+/certificate          /certificate.html   200
+/verify               /certificate.html   200
+/about                /about.html         200
+/programs             /programs.html      200
+/get-involved         /get-involved.html  200
+/resources            /resources.html     200
+/contact              /contact.html       200
+/*                    /index.html         200

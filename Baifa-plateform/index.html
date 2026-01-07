@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAIFA | Advancing Africa Through Bioinformatics & AI</title>
+  <meta name="description" content="Free certified online courses in bioinformatics and AI for young Africans with video, audio, and documents">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo.svg">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Language & Theme Toggle -->
+  <div class="header-controls">
+    <button id="lang-en" class="lang-btn active">🇬🇧 EN</button>
+    <button id="lang-fr" class="lang-btn">🇫🇷 FR</button>
+    <button id="lang-pt" class="lang-btn">🇵🇹 PT</button>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-container">
+        <img src="assets/img/logo.svg" alt="BAIFA Logo" class="logo">
+        <span class="logo-text">BAIFA</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active" data-lang="home">Home</a>
+        <a href="programs.html" class="nav-link" data-lang="programs">Programs</a>
+        <a href="courses.html" class="nav-link" data-lang="courses">Courses</a>
+        <a href="about.html" class="nav-link" data-lang="about">About</a>
+        <a href="get-involved.html" class="nav-link" data-lang="get-involved">Get Involved</a>
+        <a href="contact.html" class="nav-link" data-lang="contact">Contact</a>
+      </div>
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-content">
+      <h1 data-lang="hero-title">Advancing Africa Through Bioinformatics & AI</h1>
+      <p class="hero-subtitle" data-lang="hero-desc">BAIFA champions scientific excellence, innovation, and inclusive growth across Africa by empowering the next generation of scientists and entrepreneurs with cutting-edge digital skills.</p>
+      <div class="hero-buttons">
+        <a href="programs.html" class="btn primary" data-lang="explore-programs">Explore Programs</a>
+        <a href="courses.html" class="btn secondary" data-lang="browse-courses">Browse Courses</a>
+      </div>
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number" id="learners-count">100,000,000</span>
+          <span class="stat-label" data-lang="learners-target">Young Africans to Train</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">25</span>
+          <span class="stat-label" data-lang="courses-count">Free Courses</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">6</span>
+          <span class="stat-label" data-lang="pillars-count">Strategic Pillars</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Our Core Activities -->
+  <section class="section pillars-section">
+    <div class="container">
+      <h2 class="section-title" data-lang="core-activities">Our Core Activities</h2>
+      <p class="section-subtitle" data-lang="core-activities-desc">BAIFA drives Africa's scientific and technological advancement through six strategic pillars of action</p>
+      
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon">🔬</div>
+          <h3 data-lang="pillar-1">Scientific Research & Innovation</h3>
+          <p data-lang="pillar-1-desc">BAIFA establishes research hubs across Africa focused on solving continent-specific challenges in healthcare, agriculture, and environmental sustainability through bioinformatics and AI.</p>
+          <a href="#" class="learn-more" data-lang="learn-more">Learn more →</a>
+        </div>
+        
+        <div class="pillar-card">
+          <div class="pillar-icon">🎓</div>
+          <h3 data-lang="pillar-2">Free Training Programs</h3>
+          <p data-lang="pillar-2-desc">BAIFA offers accessible online training in bioinformatics and AI through workshops, seminars, and certification programs designed specifically for young Africans.</p>
+          <a href="courses.html" class="learn-more" data-lang="browse-courses">Browse Courses →</a>
+        </div>
+        
+        <div class="pillar-card">
+          <div class="pillar-icon">🤝</div>
+          <h3 data-lang="pillar-3">Global Partnerships</h3>
+          <p data-lang="pillar-3-desc">BAIFA cultivates strategic partnerships with national and international organizations to facilitate knowledge transfer, technology sharing, and resource mobilization.</p>
+          <a href="get-involved.html" class="learn-more" data-lang="partner-with-us">Partner with us →</a>
+        </div>
+        
+        <div class="pillar-card">
+          <div class="pillar-icon">🚀</div>
+          <h3 data-lang="pillar-4">Entrepreneurship Development</h3>
+          <p data-lang="pillar-4-desc">BAIFA equips young Africans with entrepreneurial and leadership skills to transform scientific knowledge into viable solutions for local and global challenges.</p>
+          <a href="#" class="learn-more" data-lang="view-programs">View Programs →</a>
+        </div>
+        
+        <div class="pillar-card">
+          <div class="pillar-icon">🌱</div>
+          <h3 data-lang="pillar-5">Startup Ecosystem</h3>
+          <p data-lang="pillar-5-desc">BAIFA creates a supportive ecosystem for science-based startups and small businesses across Africa through incubation programs, funding opportunities, and market access.</p>
+          <a href="#" class="learn-more" data-lang="explore-ecosystem">Explore Ecosystem →</a>
+        </div>
+        
+        <div class="pillar-card">
+          <div class="pillar-icon">♀️♂️</div>
+          <h3 data-lang="pillar-6">Gender Equality & Inclusion</h3>
+          <p data-lang="pillar-6-desc">BAIFA actively promotes gender equality and inclusivity in STEM fields, ensuring equitable participation of women and underrepresented groups in all programs.</p>
+          <a href="#" class="learn-more" data-lang="our-initiatives">Our Initiatives →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovation Ecosystem -->
+  <section class="section ecosystem-section">
+    <div class="container">
+      <h2 class="section-title" data-lang="innovation-ecosystem">Innovation Ecosystem</h2>
+      <p class="section-subtitle" data-lang="ecosystem-desc">BAIFA creates a self-sustaining ecosystem connecting research, education, entrepreneurship, and policy for maximum impact</p>
+      
+      <div class="ecosystem-stages">
+        <div class="stage">
+          <div class="stage-number">1</div>
+          <h3 data-lang="stage-1">Research & Discovery</h3>
+          <p data-lang="stage-1-desc">BAIFA funds and coordinates cutting-edge research in African genomics, disease surveillance, precision agriculture, and environmental monitoring.</p>
+          <div class="example" data-lang="stage-1-example">Example: Developing AI models to predict malaria outbreaks using climate and genomic data across West Africa.</div>
+        </div>
+        
+        <div class="stage">
+          <div class="stage-number">2</div>
+          <h3 data-lang="stage-2">Skills Development</h3>
+          <p data-lang="stage-2-desc">Our training programs convert research insights into practical skills through hands-on workshops, online courses, and certification pathways.</p>
+          <div class="example" data-lang="stage-2-example">Example: 12-week intensive program in genomic data analysis with real pathogen sequencing data from African outbreaks.</div>
+        </div>
+        
+        <div class="stage">
+          <div class="stage-number">3</div>
+          <h3 data-lang="stage-3">Entrepreneurship</h3>
+          <p data-lang="stage-3-desc">BAIFA's incubation program helps scientists transform knowledge into viable businesses with mentorship, seed funding, and market access.</p>
+          <div class="example" data-lang="stage-3-example">Example: Supporting startups developing AI-powered diagnostic tools for rural healthcare settings across East Africa.</div>
+        </div>
+        
+        <div class="stage">
+          <div class="stage-number">4</div>
+          <h3 data-lang="stage-4">Policy & Scale</h3>
+          <p data-lang="stage-4-desc">We work with governments and institutions to integrate innovations into national strategies and scale successful solutions continent-wide.</p>
+          <div class="example" data-lang="stage-4-example">Example: Partnering with African Union to deploy drought prediction models for smallholder farmers across the Sahel region.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Courses -->
+  <section class="section courses-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-lang="featured-courses">Featured Free Courses</h2>
+        <a href="courses.html" class="view-all" data-lang="view-all-courses">View All Courses →</a>
+      </div>
+      
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-badge" data-lang="course-badge-new">NEW</div>
+          <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+          <div class="course-content">
+            <h3>Introduction to Bioinformatics</h3>
+            <p data-lang="course-1-desc">Foundational course covering DNA sequencing, genomic analysis, and computational biology tools for beginners.</p>
+            <div class="course-meta">
+              <span><i class="fas fa-clock"></i> 8 weeks</span>
+              <span><i class="fas fa-graduation-cap"></i> Certificate</span>
+            </div>
+            <a href="course-player.html" class="btn course-btn" data-lang="enroll-free">Enroll Free</a>
+          </div>
+        </div>
+        
+        <div class="course-card">
+          <div class="course-badge" data-lang="course-badge-popular">POPULAR</div>
+          <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1550751802-928bf4c42904?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+          <div class="course-content">
+            <h3>AI for Healthcare in Africa</h3>
+            <p data-lang="course-2-desc">Apply artificial intelligence to solve healthcare challenges specific to African communities and health systems.</p>
+            <div class="course-meta">
+              <span><i class="fas fa-clock"></i> 10 weeks</span>
+              <span><i class="fas fa-graduation-cap"></i> Certificate</span>
+            </div>
+            <a href="course-player.html" class="btn course-btn" data-lang="enroll-free">Enroll Free</a>
+          </div>
+        </div>
+        
+        <div class="course-card">
+          <div class="course-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+          <div class="course-content">
+            <h3>Computational Drug Discovery</h3>
+            <p data-lang="course-3-desc">Learn to use bioinformatics tools to identify and develop new treatments for diseases affecting African populations.</p>
+            <div class="course-meta">
+              <span><i class="fas fa-clock"></i> 12 weeks</span>
+              <span><i class="fas fa-graduation-cap"></i> Certificate</span>
+            </div>
+            <a href="course-player.html" class="btn course-btn" data-lang="enroll-free">Enroll Free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="section impact-section">
+    <div class="container">
+      <h2 class="section-title" data-lang="continental-impact">Our Continental Impact</h2>
+      <p class="section-subtitle" data-lang="impact-desc">BAIFA's programs are transforming Africa's scientific landscape and creating opportunities for young innovators</p>
+      
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-icon">👥</div>
+          <div class="impact-number">100M+</div>
+          <div class="impact-label" data-lang="impact-1">Young Africans Trained</div>
+          <div class="impact-detail" data-lang="impact-1-detail">With free certifications in bioinformatics and AI since 2023</div>
+        </div>
+        
+        <div class="impact-card">
+          <div class="impact-icon">💼</div>
+          <div class="impact-number">85%</div>
+          <div class="impact-label" data-lang="impact-2">Employment Rate</div>
+          <div class="impact-detail" data-lang="impact-2-detail">Of graduates employed in STEM fields within 6 months</div>
+        </div>
+        
+        <div class="impact-card">
+          <div class="impact-icon">📚</div>
+          <div class="impact-number">150+</div>
+          <div class="impact-label" data-lang="impact-3">Research Publications</div>
+          <div class="impact-detail" data-lang="impact-3-detail">Co-authored by BAIFA researchers in international journals</div>
+        </div>
+        
+        <div class="impact-card">
+          <div class="impact-icon">💰</div>
+          <div class="impact-number">$50M+</div>
+          <div class="impact-label" data-lang="impact-4">Research Funding</div>
+          <div class="impact-detail" data-lang="impact-4-detail">Secured for African-led scientific projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2 data-lang="join-community">Join Our Learning Community</h2>
+        <p data-lang="newsletter-desc">Subscribe to receive updates on new courses, workshops, and opportunities to advance your skills in bioinformatics and AI.</p>
+        <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit" class="btn primary" data-lang="subscribe">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/img/logo.svg" alt="BAIFA Logo" class="footer-logo">
+          <p data-lang="footer-desc">Building a technological future for Africa through bioinformatics and artificial intelligence.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-lang="quick-links">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-lang="home">Home</a></li>
+            <li><a href="programs.html" data-lang="programs">Programs</a></li>
+            <li><a href="courses.html" data-lang="courses">Free Courses</a></li>
+            <li><a href="certificate.html" data-lang="verify-cert">Verify Certificate</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-lang="get-involved">Get Involved</h4>
+          <ul>
+            <li><a href="get-involved.html#donate" data-lang="donate">Donate</a></li>
+            <li><a href="get-involved.html#volunteer" data-lang="volunteer">Volunteer</a></li>
+            <li><a href="get-involved.html#partner" data-lang="partner">Partner</a></li>
+            <li><a href="contact.html" data-lang="contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-lang="contact-info">Contact Info</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> baifacommunity@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +212 710689692</li>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-lang="footer-location">Africa-wide operations</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 BAIFA Association. <span data-lang="footer-rights">All rights reserved. Non-profit organization dedicated to advancing bioinformatics and AI in Africa.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/low-bandwidth.js"></script>
+  <script src="assets/js/progress-tracker.js"></script>
+  <script src="assets/css/translations.js"></script>
+  
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    
+    // Theme toggle
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      this.textContent = isDark ? '🌙' : '☀️';
+      localStorage.setItem('baifa-theme', isDark ? 'light' : 'dark');
+    });
+    
+    // Restore saved theme
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('baifa-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.getElementById('theme-toggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+      
+      // Set language from localStorage or browser preference
+      const savedLang = localStorage.getItem('baifa-lang') || 
+                       (navigator.language.startsWith('fr') ? 'fr' : 
+                       (navigator.language.startsWith('pt') ? 'pt' : 'en'));
+      setLanguage(savedLang);
+    });
+    
+    // Language switching
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (translations[lang] && translations[lang][key]) {
+          if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+            el.placeholder = translations[lang][key];
+          } else if (el.tagName === 'BUTTON') {
+            el.innerHTML = translations[lang][key];
+          } else {
+            el.innerHTML = translations[lang][key];
+          }
+        }
+      });
+      
+      // Update active language button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(`lang-${lang}`).classList.add('active');
+      
+      // Save preference
+      localStorage.setItem('baifa-lang', lang);
+      
+      // Update document language
+      document.documentElement.lang = lang;
+    }
+    
+    // Language button event listeners
+    document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('lang-fr').addEventListener('click', () => setLanguage('fr'));
+    document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt'));
+    
+    // Animate impact numbers
+    function animateCounter(element, start, end, duration) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value.toLocaleString() + (element.textContent.includes('+') ? '+' : '');
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+    
+    // Initialize counters when in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(document.querySelector('.impact-number:nth-child(1)'), 0, 100000000, 2000);
+          animateCounter(document.querySelector('.impact-number:nth-child(2)'), 0, 85, 1500);
+          animateCounter(document.querySelector('.impact-number:nth-child(3)'), 0, 150, 1500);
+          animateCounter(document.querySelector('.impact-number:nth-child(4)'), 0, 50, 1500);
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(document.querySelector('.impact-section'));
+  </script>
+</body>
+</html>
